@@ -14,5 +14,14 @@ namespace Orc.Metadata
 
         object GetMetadataValue(string key);
         bool SetMetadataValue(string key, object value);
+
+        /// <summary>
+        ///     Gets or sets the value of the specified <see cref="IMetadata"/> by property key on
+        ///     the associated model.
+        /// </summary>
+        /// <value>The value.</value>
+        /// <param name="propertyKey">The property key.</param>
+        /// <returns><see cref="IMetadata"/> value for associated model if available, null otherwise.</returns>
+        object this[string propertyKey] { get; set; }
     }
 }

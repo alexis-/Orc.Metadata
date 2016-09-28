@@ -29,6 +29,12 @@ namespace Orc.Metadata
             return SetMetadataValueWithInstance(Instance, key, value);
         }
 
+        public object this[string propertyKey]
+        {
+            get { return GetMetadataValue(propertyKey); }
+            set { SetMetadataValue(propertyKey, value); }
+        }
+
         protected object GetMetadataValueWithInstance(object instance, string key)
         {
             var metadata = MetadataCollection.GetMetadata(key);
